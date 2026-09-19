@@ -27,7 +27,7 @@ def get_tex_mob_scale_factor() -> float:
     # Render a reference "0" and calibrate so that font_size_for_unit_height
     # gives a height of 1 manim unit. Compensates for platform dvisvgm differences.
     font_size_for_unit_height = manim_config.tex.font_size_for_unit_height
-    svg_string = latex_to_svg("0", show_message_during_execution=False)
+    svg_string = latex_to_svg("M", show_message_during_execution=False)
     svg_height = get_svg_content_height(svg_string)
     return 1.0 / (font_size_for_unit_height * svg_height)
 

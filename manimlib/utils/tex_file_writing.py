@@ -42,6 +42,7 @@ def get_full_tex(content: str, preamble: str = ""):
         "\n\n".join(
             (
                 "\\documentclass[preview]{standalone}",
+                "\\usepackage{lmodern}",
                 preamble,
                 "\\begin{document}",
                 content,
